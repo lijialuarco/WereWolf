@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('lionarco.com.html',function (){
+    return view('lionarco');
+});
