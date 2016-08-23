@@ -13,7 +13,18 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('*', function($view) {
+            // Instantiate new DOMDocument object
+            $svg = new \DOMDocument();
+            // Load SVG file from public folder
+            $svg->load(public_path('index.svg'));
+            // Add CSS class (you can omit this line)
+            $svg->documentElement->setAttribute("class", "star");
+            // Get XML without version element
+            $star = $svg->saveXML($svg->documentElement);
+            // Attach data to view
+            $view->with('star', $star);
+        });
     }
 
     /**
