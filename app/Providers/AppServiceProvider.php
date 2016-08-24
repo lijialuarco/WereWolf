@@ -17,13 +17,13 @@ class AppServiceProvider extends ServiceProvider
             // Instantiate new DOMDocument object
             $svg = new \DOMDocument();
             // Load SVG file from public folder
-            $svg->load(public_path('index.svg'));
+            $svg->load(public_path('images/Logo.svg'));
             // Add CSS class (you can omit this line)
-            $svg->documentElement->setAttribute("class", "star");
+            $svg->documentElement->setAttribute("class", "logo");
             // Get XML without version element
             $star = $svg->saveXML($svg->documentElement);
             // Attach data to view
-            $view->with('star', $star);
+            $view->with('logo', $star);
         });
     }
 

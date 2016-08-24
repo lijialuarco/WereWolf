@@ -1,7 +1,7 @@
 /vendor
 /node_modules
 /public/storage
+.ideas
 Homestead.yaml
 Homestead.json
 .env
-.idea/workspace.xml
