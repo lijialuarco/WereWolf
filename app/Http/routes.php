@@ -17,3 +17,7 @@ Route::get('/', function () {
 Route::get('lionarco.com.html',function (){
     return view('lionarco');
 });
+
+Route::get('/index',function (){
+    return "it's Index";
+});

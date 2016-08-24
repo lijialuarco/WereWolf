@@ -17,6 +17,7 @@
         <div class="content">
             <div class="loader-circle"></div>
             <div class="loader-line-mask">
+                <a href="/index"/>
                 <div class="loader-line"></div>
             </div>
             {!! $logo !!}
