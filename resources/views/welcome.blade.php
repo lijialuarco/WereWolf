@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>It's cool</title>
+        <link rel="shortcut icon" href="favicon.ico">
         <link href="/css/index.css" rel="stylesheet" >
     </head>
     <body>
