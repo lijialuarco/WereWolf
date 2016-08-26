@@ -14,10 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('lionarco.com.html',function (){
-    return view('lionarco');
-});
 
-Route::get('/index',function (){
-    return "it's Index";
-});
+
+Route::resource('/index','IndexController');
+Route::resource('/room','RoomController');
+Route::get('/step/{id}','GameController@getStep');
+
+//Route::get('/share','IndexController@share');

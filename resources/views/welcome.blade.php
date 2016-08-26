@@ -16,10 +16,12 @@
     <div class="vertical-centered-box">
         <div class="content">
             <div class="loader-circle"></div>
+            <a href="{{ url('/index') }}">
             <div class="loader-line-mask">
-                <a href="/index"/>
+
                 <div class="loader-line"></div>
             </div>
+            </a>
             {!! $logo !!}
         </div>
     </div>
