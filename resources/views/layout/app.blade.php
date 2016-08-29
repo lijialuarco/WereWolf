@@ -6,46 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> @yield('title') Are U Wolf?</title>
     <link rel="stylesheet" href="/css/app.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
     <style>
         html, body {
-            height: 100%;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            display: table;
+            background-color: #fff;
+            color: #636b6f;
+            font-family: 'Raleway', sans-serif;
             font-weight: 100;
-            font-family: 'Lato', sans-serif;
+            height: 100vh;
+            margin: 0;
         }
 
-        .container {
-            text-align: center;
-            display: table-cell;
-            vertical-align: middle;
+        .full-height {
+            height: 100vh;
+        }
+
+        .flex-center {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .position-ref {
+            position: relative;
+        }
+
+        .top-right {
+            position: absolute;
+            right: 10px;
+            top: 18px;
         }
 
         .content {
             text-align: center;
-            display: inline-block;
         }
 
         .title {
-            font-size: 96px;
+            font-size: 84px;
         }
 
-        h2 {
-           color: darkred;
-            font-weight: bold;
+        .links > a {
+            color: #636b6f;
+            padding: 0 25px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            text-transform: uppercase;
         }
 
-        span {
-
+        .m-b-md {
+            margin-bottom: 30px;
         }
-
-    </style>
+        /*span {*/
+            /*font-family: 'Raleway', sans-serif;*/
+            /*font-weight: 100;*/
+            /*height: 100vh;*/
+            /*margin: 0;*/
+        /*}*/
+        .Raleway {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 100;
+            height: 100vh;
+            margin: 0;
+        }
+        </style>
     @yield('css')
 
 </head>

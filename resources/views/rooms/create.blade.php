@@ -7,7 +7,11 @@
         {{--<h2>Set Your Nickname:</h2> <input name="nickname" id="nickname" />--}}
         {{--<h2>Entry Your RoomNo:</h2> <input name="RoomNo" id="RoomNo" />--}}
         <br/>
-        <h2>Choose Roles:</h2>
+        <div class="content">
+        <div class="title m-b-md">
+            Choose Roles
+
+        </div>
         <input name="wolfNumber" id="wolfNumber" size="5"/> &nbsp;&nbsp;&nbsp;<span>Wolves</span>
         <br/>
         <input name="villagerNumber" id="villagerNumber" size="5"/> &nbsp;<span>Villagers</span>
@@ -20,11 +24,10 @@
 
         <h5>Tips:</h5>
 
-
-
-        <button type="submit" class="btn btn-primary btn-lg btn-submit">
+        <button type="submit" class="btn btn-danger btn-sm btn-submit">
             Create
         </button>
+           </div>
     </form>
     </div>
 @endsection
