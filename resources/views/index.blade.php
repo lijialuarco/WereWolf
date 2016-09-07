@@ -17,20 +17,20 @@
         {{--<br />--}}
         {{--<a  class="" href="{{ url('/room/create') }}">Or Create A Room</a>--}}
         {{--<div class="flex-center position-ref full-height">--}}
+        <span> 这是好看的字体</span>
 
-
-            <div class="content">
-                <div class="title m-b-md">
-                    输入你的房间号：
-                </div>
-                <input name="RoomNo" id="RoomNo" />
-                <button  type="submit" class="btn btn-danger btn-sm btn-submit">
-                    Start
-                </button>
-                <div class="links">
-                    <a  class="" href="{{ url('/rooms/create') }}">Or Create A Room</a>
-                </div>
-            </div>
+            {{--<div class="content">--}}
+                {{--<div class="title m-b-md">--}}
+                   {{--输入你的房间号：--}}
+                {{--</div>--}}
+                {{--<input name="RoomNo" id="RoomNo" />--}}
+                {{--<button  type="submit" class="btn btn-danger btn-sm btn-submit">--}}
+                   {{--开始--}}
+                {{--</button>--}}
+                {{--<div class="links">--}}
+                    {{--<a  class="" href="{{ url('/rooms/create') }}">创建房间</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
     </form>
     </div>
 @endsection
