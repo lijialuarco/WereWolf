@@ -21,14 +21,14 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Entry Your RoomNo:
+                    输入你的房间号：
                 </div>
                 <input name="RoomNo" id="RoomNo" />
                 <button  type="submit" class="btn btn-danger btn-sm btn-submit">
                     Start
                 </button>
                 <div class="links">
-                    <a  class="" href="{{ url('/room/create') }}">Or Create A Room</a>
+                    <a  class="" href="{{ url('/rooms/create') }}">Or Create A Room</a>
                 </div>
             </div>
     </form>

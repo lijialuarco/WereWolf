@@ -149,6 +149,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Overtrue\LaravelPinyin\ServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -208,6 +209,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+//        'Redis' => \Illuminate\Support\Facades\Redis::class,
+        'Pinyin' => Overtrue\LaravelPinyin\Facades\Pinyin::class,
 
     ],
 

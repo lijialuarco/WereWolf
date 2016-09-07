@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Role\Play;
+use App\role\Villager;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Role\Play;
 use Illuminate\Support\Facades\Redis;
-use Psy\Exception\ThrowUpException;
-use Symfony\Component\VarDumper\Exception\ThrowingCasterException;
+
 
 class RoomController extends Controller
 {
@@ -21,24 +21,39 @@ class RoomController extends Controller
      /* * *
      ----------
         接收玩家创建房间数据
-        打乱后用redis存储
+        乱序后用redis存储
      ----------
       * * */
 
     public function store(Request $request)
     {
+        $roomNu = rand(1000,9999);
+
         $players = $this->sortPlayer($request);
 
-//        $playerNu = count($players);
-//        $roomNo = rand(1000,9999);
+
+        for($i=1;$i<=count($players);$i++)
+            $status = Redis::rpush($roomNu,json_encode([$i ,$players[$i-1]]));
 
 
-        return view("rooms/show",compact('players'));
+        if ($status){
+            return redirect(route('rooms.show',$roomNu));
+        }else{
+            abort(403);
+        }
     }
 
-    public function show()
+      /* * *
+     ----------
+        游戏具体控制
+     ----------
+      * * */
+
+    public function show($roomNu)
     {
-            return 'hi';
+//        $players[] = Redis::lindex($roomNu,0);
+        $playerNu = Redis::llen($roomNu);
+        return view('rooms/show',compact('roomNu','playerNu'));
     }
 
      /* * *

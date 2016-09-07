@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('content')
 <div class="container">
-    <form action="/room" method="post" class="createRoom-form"
+    <form action="/rooms" method="post" class="createRoom-form"
           id="createRoom_form">
         {{ csrf_field() }}
         {{--<h2>Set Your Nickname:</h2> <input name="nickname" id="nickname" />--}}

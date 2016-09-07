@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 Route::resource('/index','IndexController');
-Route::resource('/room','RoomController');
-Route::get('/step/{id}','GameController@getStep');
+Route::resource('/rooms','RoomController');
+Route::post('/step/start','GameController@start');
 
 //Route::get('/share','IndexController@share');

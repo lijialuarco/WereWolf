@@ -4,14 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title> @yield('title') Are U Wolf?</title>
-    <link rel="stylesheet" href="/css/app.css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    {{--<link rel="stylesheet" href="/css/app.css">--}}
+    {{--<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">--}}
     <style>
+
+        @font-face {
+            font-family: 'hyqt';
+            src: url('../../../public/font/hyqt.eot');
+            src:
+                    url('../../../public/font/hyqt.eot?#font-spider') format('embedded-opentype'),
+                    url('../../../public/font/hyqt.woff2') format('woff2'),
+                    url('../../../public/font/hyqt.woff') format('woff'),
+                    url('../../../public/font/hyqt.ttf') format('truetype'),
+                    url('../../../public/font/hyqt.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         html, body {
             background-color: #fff;
             color: #636b6f;
-            font-family: 'Raleway', sans-serif;
+            font-family: 'hyqt', sans-serif;
             font-weight: 100;
             height: 100vh;
             margin: 0;
@@ -58,18 +73,18 @@
         .m-b-md {
             margin-bottom: 30px;
         }
-        /*span {*/
-            /*font-family: 'Raleway', sans-serif;*/
-            /*font-weight: 100;*/
-            /*height: 100vh;*/
-            /*margin: 0;*/
-        /*}*/
-        .Raleway {
+        span {
             font-family: 'Raleway', sans-serif;
             font-weight: 100;
             height: 100vh;
             margin: 0;
         }
+        /*.Raleway {*/
+            /*font-family: 'Raleway', sans-serif;*/
+            /*font-weight: 100;*/
+            /*height: 100vh;*/
+            /*margin: 0;*/
+        /*}*/
         </style>
     @yield('css')
 
